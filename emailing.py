@@ -10,6 +10,7 @@ RECIPIENT = 'asusmfs2019@gmail.com'
 
 
 def send_email(image_path):
+    print("send_email function started")
     msg = EmailMessage()
     msg['From'] = SENDER
     msg['To'] = RECIPIENT
@@ -47,6 +48,8 @@ def send_email(image_path):
         gmail.quit()
     except smtplib.SMTPException:
         print('Error: unable to send email')
+
+    print("send_email function ended")
 
 
 if __name__ == '__main__':
